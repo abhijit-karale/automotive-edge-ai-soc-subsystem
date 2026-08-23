@@ -1,0 +1,29 @@
+# Simulation and Build Artifacts
+*.vcd
+*.wdb
+*.log
+work/
+*.out
+__pycache__/
+*.pyc
+.DS_Store
+build/
+sim/
+*.o
+*.a
+*.so
+
+# Cadence & Synopsys EDA Tools
+*.key
+*.diag
+jgproject/
+.jasper/
+cov_work/
+xcelium.d/
+simv*
+
+# C Cross-compilation
+*.elf
+*.bin
+*.hex
+*.map
