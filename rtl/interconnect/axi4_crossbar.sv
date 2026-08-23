@@ -10,7 +10,7 @@ module axi4_crossbar (
 
     // Master 0 Interface (RV32I Core)
     input  logic [31:0] m0_awaddr,  input  logic m0_awvalid, output logic m0_awready,
-    input  logic [64:0] m0_wdata,   input  logic m0_wvalid,  output logic m0_wready,
+    input  logic [63:0] m0_wdata,   input  logic m0_wvalid,  output logic m0_wready,
     output logic [1:0]  m0_bresp,   output logic m0_bvalid,  input  logic m0_bready,
     input  logic [31:0] m0_araddr,  input  logic m0_arvalid, output logic m0_arready,
     output logic [63:0] m0_rdata,   output logic m0_rvalid,  input  logic m0_rready,

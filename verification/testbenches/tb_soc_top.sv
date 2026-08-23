@@ -58,10 +58,17 @@ module tb_soc_top;
         rst_soc_n  = 1'b0;
         rst_pclk_n = 1'b0;
         can_rx     = 1'b1;
-        uart_rx    = 1 me1;
+        uart_rx    = 1'b1;
 
-        // Reset Pulse (100ns)
-        #100;
+        #50;
+        if (u_dut.u_rv32i_cpu.pc_q == 32'h0000_0000) begin
+            $display("[TB PASS] RV32I Processor Reset Vector Initialized (PC = 0x0000_0000)");
+        end else begin
+            $error("[TB FAIL] RV32I Processor Reset Vector Invalid!");
+        end
+
+        // Reset Pulse (100ns total)
+        #50;
         rst_soc_n  = 1'b1;
         rst_pclk_n = 1'b1;
         $display("[TB INFO] Resets Deasserted at time %0t ps", $time);
@@ -70,11 +77,11 @@ module tb_soc_top;
         #200;
 
         // Verify Top-Level Clock & Power Integrity
-        $display("[TB CHECK] Checking Subsystem Clock & Interconnect Status...");
-        if (u_dut.u_rv32i_cpu.pc_q == 32'h0000_0000) begin
-            $display("[TB PASS] RV32I Processor Boot Vector Initialized Successfully (PC = 0x0000_0000)");
+        $display("[TB CHECK] Checking Subsystem Clock & Execution Status...");
+        if (u_dut.u_rv32i_cpu.pc_q > 32'h0000_0000) begin
+            $display("[TB PASS] RV32I Processor Pipeline Executing (PC = 0x%08h)", u_dut.u_rv32i_cpu.pc_q);
         end else begin
-            $error("[TB FAIL] RV32I Processor Boot Vector Invalid!");
+            $error("[TB FAIL] RV32I Processor Pipeline Stalled!");
         end
 
         // Run for 1,000ns

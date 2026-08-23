@@ -222,7 +222,7 @@ module soc_top (
         .rst_soc_n     (rst_soc_n),
         .axi_awaddr_i  (s2_awaddr),  .axi_awvalid_i(s2_awvalid), .axi_awready_o(s2_awready),
         .axi_wdata_i   (s2_wdata[31:0]), .axi_wvalid_i (s2_wvalid),  .axi_wready_o (s2_wready),
-        .axi_bresp_o   (s2_bresp),   .axi_bvalid_i (s2_bvalid),  .axi_bready_i (1'b1),
+        .axi_bresp_o   (s2_bresp),   .axi_bvalid_o (s2_bvalid),  .axi_bready_i (1'b1),
         .axi_araddr_i  (s2_araddr),  .axi_arvalid_i(s2_arvalid), .axi_arready_o(s2_arready),
         .axi_rdata_o   (s2_rdata[31:0]), .axi_rresp_o  (),           .axi_rvalid_o (s2_rvalid),
         .axi_rready_i  (1'b1),
