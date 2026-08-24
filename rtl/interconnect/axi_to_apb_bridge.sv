@@ -1,4 +1,4 @@
-  // ============================================================================
+// ============================================================================
 // File: rtl/interconnect/axi_to_apb_bridge.sv
 // Description: AXI4-Lite to APB3 Bridge Module with Integrated CDC Async FIFO
 // Standard: SystemVerilog IEEE 1800-2017
