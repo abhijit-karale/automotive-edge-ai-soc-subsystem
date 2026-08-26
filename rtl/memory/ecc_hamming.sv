@@ -1,6 +1,6 @@
 // ============================================================================
 // File: rtl/memory/ecc_hamming.sv
-// Description: Hamming SECDED (Single Error Correction, Double Error Detection) Engine
+ // Description: Hamming SECDED (Single Error Correction, Double Error Detection) Engine
  // Standard: SystemVerilog IEEE 1800-2017
  // ============================================================================
 
