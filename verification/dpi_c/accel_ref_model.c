@@ -1,4 +1,4 @@
- /**
+  /**
  * @file accel_ref_model.c
  * @brief Golden C Reference Model for Matrix MAC & Quantization
  */
