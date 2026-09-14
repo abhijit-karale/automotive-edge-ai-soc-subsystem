@@ -1,5 +1,5 @@
  // ============================================================================
-// File: rtl/accelerator/accel_fsm_control.sv
+ // File: rtl/accelerator/accel_fsm_control.sv
 // Description: AI Accelerator Control State Machine
 // Standard: SystemVerilog IEEE 1800-2017
 // ============================================================================
