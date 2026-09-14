@@ -2,7 +2,7 @@
  // File: rtl/accelerator/accel_mac_array.sv
  // Description: 4x4 INT8 Systolic Array MAC Hardware Engine
  // Standard: SystemVerilog IEEE 1800-2017
-// ============================================================================
+ // ============================================================================
 
 module accel_mac_array #(
     parameter int ARRAY_SIZE = 4
