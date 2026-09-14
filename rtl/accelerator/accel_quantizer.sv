@@ -1,6 +1,6 @@
  // ============================================================================
  // File: rtl/accelerator/accel_quantizer.sv
-// Description: Quantizer & Activation (ReLU / Pass-through) Unit
+ // Description: Quantizer & Activation (ReLU / Pass-through) Unit
 // Standard: SystemVerilog IEEE 1800-2017
 // ============================================================================
 
