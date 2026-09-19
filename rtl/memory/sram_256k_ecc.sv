@@ -1,5 +1,5 @@
  // ============================================================================
-// File: rtl/memory/sram_256k_ecc.sv
+ // File: rtl/memory/sram_256k_ecc.sv
 // Description: 256KB On-Chip SRAM Subsystem with Integrated SECDED Hamming ECC
 // Standard: SystemVerilog IEEE 1800-2017
 // ============================================================================
